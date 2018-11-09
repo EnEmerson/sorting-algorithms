@@ -39,7 +39,8 @@ namespace sortingAlgorithms
                 randBox.Items.Add(numbers[j-1]);
             }
 
-            Console.Write("Items in numbers list: " + numbers.Count()); //making sure my number generator works
+            //making sure my number generator works
+            Console.WriteLine("Items in numbers list: " + numbers.Count()); 
         }
 
         public void clearLists()
@@ -49,10 +50,12 @@ namespace sortingAlgorithms
             numbers.Clear();
         }
 
-        public void quickSort(List<int> nums, int lo, int hi) // Lomuto partition scheme
+        
+        public void quickSort(List<int> nums, int lo, int hi) 
         {
             int low = lo;
             int high = hi;
+            int p;
             List<int> quickNums = new List<int>();
             foreach(int k in nums)
             {
@@ -60,10 +63,61 @@ namespace sortingAlgorithms
             }
             if(low < high)
             {
-                // p := partition(Array, low, high)
-                // quickSort(Array, low, p - 1)
-                // quickSort(Array, p + 1, high)
+                p = partition(quickNums, low, high);
+                quickSort(quickNums, low, p - 1);
+                quickSort(quickNums, p + 1, high);
             }
+        }
+
+        // Lomuto partition scheme
+        public int partition(List<int> nums, int lo, int hi)
+        {
+            int low = lo;
+            int high = hi;
+            int pivot = 0;
+            List<int> partNums = new List<int>();
+            List<int> swaps = new List<int>();
+
+            //puts everything from the given array into the partition array
+            foreach (int num in nums)
+            {
+                partNums.Add(nums[num]);
+            }
+
+            //duplicates array for easy swapping later on
+            foreach(int item in partNums)
+            {
+                swaps.Add(partNums[item]);
+            }
+
+            pivot = partNums[high];
+
+            int i = low - 1;
+            for(int j = low; j <= high-1; j++)
+            {
+                if(partNums[j] < pivot)
+                {
+                    if(i != j)
+                    {
+                        i++;
+                        partNums[i] = swaps[j];
+                        partNums[j] = swaps[i];
+
+                    }
+                }
+            }
+            i++;
+            partNums[i] = swaps[high];
+            partNums[high] = swaps[i];
+
+            
+            return i;
+        }
+        private void quickSortButton_Click(object sender, EventArgs e)
+        {
+            outputBox.Items.Clear();
+            quickSort(numbers, 0, numbers.Count-1);
+
         }
     }
 }

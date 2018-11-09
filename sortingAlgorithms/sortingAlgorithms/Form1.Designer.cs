@@ -42,9 +42,10 @@
             // 
             // generateButton
             // 
-            this.generateButton.Location = new System.Drawing.Point(39, 342);
+            this.generateButton.Location = new System.Drawing.Point(58, 526);
+            this.generateButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.generateButton.Name = "generateButton";
-            this.generateButton.Size = new System.Drawing.Size(75, 23);
+            this.generateButton.Size = new System.Drawing.Size(112, 35);
             this.generateButton.TabIndex = 0;
             this.generateButton.Text = "Generate";
             this.generateButton.UseVisualStyleBackColor = true;
@@ -53,60 +54,70 @@
             // randBox
             // 
             this.randBox.FormattingEnabled = true;
-            this.randBox.Location = new System.Drawing.Point(39, 41);
+            this.randBox.ItemHeight = 20;
+            this.randBox.Location = new System.Drawing.Point(58, 63);
+            this.randBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.randBox.Name = "randBox";
-            this.randBox.Size = new System.Drawing.Size(192, 290);
+            this.randBox.Size = new System.Drawing.Size(286, 444);
             this.randBox.TabIndex = 1;
             // 
             // outputBox
             // 
             this.outputBox.FormattingEnabled = true;
-            this.outputBox.Location = new System.Drawing.Point(548, 41);
+            this.outputBox.ItemHeight = 20;
+            this.outputBox.Location = new System.Drawing.Point(822, 63);
+            this.outputBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.outputBox.Name = "outputBox";
-            this.outputBox.Size = new System.Drawing.Size(192, 290);
+            this.outputBox.Size = new System.Drawing.Size(286, 444);
             this.outputBox.TabIndex = 2;
             // 
             // quickSortButton
             // 
-            this.quickSortButton.Location = new System.Drawing.Point(271, 64);
+            this.quickSortButton.Location = new System.Drawing.Point(406, 98);
+            this.quickSortButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.quickSortButton.Name = "quickSortButton";
-            this.quickSortButton.Size = new System.Drawing.Size(92, 48);
+            this.quickSortButton.Size = new System.Drawing.Size(138, 74);
             this.quickSortButton.TabIndex = 3;
             this.quickSortButton.Text = "Quick Sort";
             this.quickSortButton.UseVisualStyleBackColor = true;
+            this.quickSortButton.Click += new System.EventHandler(this.quickSortButton_Click);
             // 
             // bubbleSortButton
             // 
-            this.bubbleSortButton.Location = new System.Drawing.Point(271, 139);
+            this.bubbleSortButton.Location = new System.Drawing.Point(406, 214);
+            this.bubbleSortButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.bubbleSortButton.Name = "bubbleSortButton";
-            this.bubbleSortButton.Size = new System.Drawing.Size(92, 48);
+            this.bubbleSortButton.Size = new System.Drawing.Size(138, 74);
             this.bubbleSortButton.TabIndex = 4;
             this.bubbleSortButton.Text = "Bubble Sort";
             this.bubbleSortButton.UseVisualStyleBackColor = true;
             // 
             // mergeSortButton
             // 
-            this.mergeSortButton.Location = new System.Drawing.Point(415, 64);
+            this.mergeSortButton.Location = new System.Drawing.Point(622, 98);
+            this.mergeSortButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.mergeSortButton.Name = "mergeSortButton";
-            this.mergeSortButton.Size = new System.Drawing.Size(92, 48);
+            this.mergeSortButton.Size = new System.Drawing.Size(138, 74);
             this.mergeSortButton.TabIndex = 5;
             this.mergeSortButton.Text = "Merge Sort";
             this.mergeSortButton.UseVisualStyleBackColor = true;
             // 
             // insertionSortButton
             // 
-            this.insertionSortButton.Location = new System.Drawing.Point(415, 139);
+            this.insertionSortButton.Location = new System.Drawing.Point(622, 214);
+            this.insertionSortButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.insertionSortButton.Name = "insertionSortButton";
-            this.insertionSortButton.Size = new System.Drawing.Size(92, 48);
+            this.insertionSortButton.Size = new System.Drawing.Size(138, 74);
             this.insertionSortButton.TabIndex = 6;
             this.insertionSortButton.Text = "Insertion Sort";
             this.insertionSortButton.UseVisualStyleBackColor = true;
             // 
             // clearButton
             // 
-            this.clearButton.Location = new System.Drawing.Point(665, 342);
+            this.clearButton.Location = new System.Drawing.Point(998, 526);
+            this.clearButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.clearButton.Name = "clearButton";
-            this.clearButton.Size = new System.Drawing.Size(75, 23);
+            this.clearButton.Size = new System.Drawing.Size(112, 35);
             this.clearButton.TabIndex = 7;
             this.clearButton.Text = "Clear";
             this.clearButton.UseVisualStyleBackColor = true;
@@ -114,27 +125,29 @@
             // 
             // heapSortButton
             // 
-            this.heapSortButton.Location = new System.Drawing.Point(271, 217);
+            this.heapSortButton.Location = new System.Drawing.Point(406, 334);
+            this.heapSortButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.heapSortButton.Name = "heapSortButton";
-            this.heapSortButton.Size = new System.Drawing.Size(92, 48);
+            this.heapSortButton.Size = new System.Drawing.Size(138, 74);
             this.heapSortButton.TabIndex = 8;
             this.heapSortButton.Text = "Heap Sort";
             this.heapSortButton.UseVisualStyleBackColor = true;
             // 
             // selectSortButton
             // 
-            this.selectSortButton.Location = new System.Drawing.Point(415, 217);
+            this.selectSortButton.Location = new System.Drawing.Point(622, 334);
+            this.selectSortButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.selectSortButton.Name = "selectSortButton";
-            this.selectSortButton.Size = new System.Drawing.Size(92, 48);
+            this.selectSortButton.Size = new System.Drawing.Size(138, 74);
             this.selectSortButton.TabIndex = 9;
             this.selectSortButton.Text = "Selection Sort";
             this.selectSortButton.UseVisualStyleBackColor = true;
             // 
             // sortingForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(785, 407);
+            this.ClientSize = new System.Drawing.Size(1178, 626);
             this.Controls.Add(this.selectSortButton);
             this.Controls.Add(this.heapSortButton);
             this.Controls.Add(this.clearButton);
@@ -145,6 +158,7 @@
             this.Controls.Add(this.outputBox);
             this.Controls.Add(this.randBox);
             this.Controls.Add(this.generateButton);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "sortingForm";
             this.Text = "Sorting Algorithms";
             this.ResumeLayout(false);
